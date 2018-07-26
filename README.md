@@ -10,4 +10,4 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk)
 |"claimFeeNQT" | TX-Fee Per Claim |
 |"faucetWallet" |Local Wallet Url | Alternative External Wallet  |
 |"passphrase" | Passphrase for Faucet Account |
-|"faucetAccount" | //Numeric Account ID or RS-Address |
+|"faucetAccount" | Numeric Account ID or RS-Address |
