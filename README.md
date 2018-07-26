@@ -6,8 +6,8 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk)
 | --- | --- |
 |"googlePublicKey" | Google Recaptcha: Public Key |
 |"googlePrivateKey" | Google Recaptcha: Private Key |
-|"claimRewardNQT" | Reward Per Claim |
-|"claimFeeNQT" | TX-Fee Per Claim |
+|"claimRewardNQT" | Reward per Claim |
+|"claimFeeNQT" | TX-Fee per Claim |
 |"faucetWallet" |Local Wallet Url | Alternative External Wallet  |
 |"passphrase" | Passphrase for Faucet Account |
 |"faucetAccount" | Numeric Account ID or RS-Address |
