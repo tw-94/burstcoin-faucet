@@ -11,3 +11,5 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk)
 |"faucetWallet" |Local Wallet Url | Alternative External Wallet  |
 |"passphrase" | Passphrase for Faucet Account |
 |"faucetAccount" | Numeric Account ID or RS-Address |
+ 
+Donate to support development Burst-2QQ5-6477-ZFK5-BQCH4
