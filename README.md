@@ -1,7 +1,7 @@
 # burstcoin-faucet
 Faucet for Cryptocurrency Burstcoin (use at your own risk)
 
-**Config**
+**Configuration Paramater**
 
 | Setting | Description |
 | --- | --- |
