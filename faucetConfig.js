@@ -13,4 +13,8 @@ faucetWallet : "",
 passphrase: "",
 //Numeric or RS-Address
 faucetAccount: "",
+//Http Port
+httpPort: 80,
+//Max Request per Ip
+maxRequest: 3,
 }
