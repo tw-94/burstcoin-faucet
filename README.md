@@ -10,6 +10,9 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk)
 |"Google Domains" | Enter Domains where Faucet is reachable |
 |" Node 4.0 +" | Version Tested |
 
+```
+npm update or successively npm install _module:Name_ 
+```
 
 **Configuration Paramater**
 
@@ -25,5 +28,7 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk)
 |"faucetAccount" | Numeric Account ID or RS-Address |
 |"maxRequest" | Maximal Number of Request per Ip|
 
- 
+
+```
 Donate to support development Burst-2QQ5-6477-ZFK5-BQCH4
+```
