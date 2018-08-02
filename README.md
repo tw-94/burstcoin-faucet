@@ -11,7 +11,7 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk)
 |" Node 4.0 +" | Version Tested |
 
 ```
-npm update or successively npm install _module:Name_ 
+npm update or successively npm install "module name"
 ```
 
 **Configuration Paramater**
