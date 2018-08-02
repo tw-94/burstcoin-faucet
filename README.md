@@ -1,15 +1,16 @@
 # burstcoin-faucet
-Faucet for Cryptocurrency Burstcoin (use at your own risk)
+Faucet for Cryptocurrency Burstcoin (use at your own risk) written by BurstNeon http://burstneon.com/
 
 **Installation Guide**
 
 | required | Description |
 | --- | --- |
 |"Google reCaptcha" | Public Key and Private Key|
+|"Replace on index.html and index.ejs" | Site Key with Your Public Key |
 ```
 register here: https://www.google.com/recaptcha/intro/v3beta.html
 ```
-|"Replace on index.html and index.ejs" | Site Key with Your Public Key |
+| --- | --- |
 |"Google Domains" | Enter Domains where Faucet is reachable |
 |" Node 4.0 +" | Version Tested |
 
