@@ -70,7 +70,7 @@ function initWebserver() {
 
 
     app.listen(faucetConfig.httpPort, function() {
-        console.log('http server running on port ' + 80);
+        console.log('http server running on port ' + faucetConfig.httpPort);
     });
 
 }
