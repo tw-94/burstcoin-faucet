@@ -53,10 +53,9 @@ function initWebserver() {
         console.log("1 | Requested Account: " + req.body.name);
         recaptcha.verify(req, function(error, data) {
             //TO-DO Change later
-            if (error) {
+            if (!error) {
                 checkWallet(req.body.name);
-            } else {
-                console.log(error + "no");
+            } else {           
                 errorMessage = 'reCAPTCHA validation failed'
             }
         })
