@@ -5,17 +5,15 @@ Faucet for Cryptocurrency Burstcoin (use at your own risk) written by BurstNeon 
 
 | required | Description |
 | --- | --- |
-|"Google reCaptcha" | Public Key and Private Key|
-|"Replace on index.html and index.ejs" | Site Key with Your Public Key |
+|"1.Google reCaptcha" | Public Key and Private Key|
+|"1.1 Replace on index.html and index.ejs" | Site Key with Your Public Key |
+|"1.1.2 Google Domains" | Enter Domains where Faucet is reachable |
+|"2. Node 4.0 +" | Version Tested |
 ```
-register here: https://www.google.com/recaptcha/intro/v3beta.html
+1. register here: https://www.google.com/recaptcha/intro/v3beta.html
 ```
-| --- | --- |
-|"Google Domains" | Enter Domains where Faucet is reachable |
-|" Node 4.0 +" | Version Tested |
-
 ```
-npm update or successively npm install "module name"
+2. npm update or successively npm install "module name"
 ```
 
 **Configuration Paramater**
