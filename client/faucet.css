@@ -29,6 +29,7 @@ font-size: 15px;
     text-transform: uppercase;
     font-family: arial;
 }
+
 .wrapper {
   display: block;
   position: absolute;
@@ -64,6 +65,7 @@ font-size: 15px;
 color: coral;
 border: 1px solid aliceblue;
 }
+#error {background: white;text-align: center;padding: 2px;text-transform: uppercase;font-size: 10px;}
 .button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
@@ -87,7 +89,7 @@ border: 1px solid aliceblue;
 }
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-html{   background:url(picture/hdd.jpg) no-repeat;
+html{    background:url(picture/hdd.jpg) no-repeat;
   background-size: cover;
   height:100%;
 }
@@ -103,20 +105,21 @@ html{   background:url(picture/hdd.jpg) no-repeat;
 }
 
 #form-div {
-	background-color:rgba(72,72,72,0.4);
-	padding-left:35px;
-	padding-right:35px;
-	padding-top:35px;
-	padding-bottom:50px;
-	width: 450px;
-	float: left;
-	left: 50%;
-	position: absolute;
-  margin-top:30px;
-	margin-left: -260px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  top: 20%;
+    background-color: rgba(72,72,72,0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -260px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    top: 20%;
+    border: 2px solid white;
 }
 
 .feedback-input {
@@ -136,7 +139,7 @@ html{   background:url(picture/hdd.jpg) no-repeat;
 	box-sizing: border-box;
   border: 3px solid rgba(0,0,0,0);
 }
-#error {background: white;text-align: center;padding: 2px;text-transform: uppercase;font-size: 10px;}
+
 .feedback-input:focus{
 	background: #fff;
 	box-shadow: 0;
@@ -252,4 +255,68 @@ input:focus, textarea:focus {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+}
+#error {
+    background: white;
+    text-align: center;
+}
+
+.box {
+  border: 1px solid #f00;
+  background: #c40;
+  position: relative;
+  width: 200px;
+}
+.box .ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+.box .ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#34C9A1 0%, #21A795 100%);
+  box-shadow: 0 3px 10px -5px black;
+  position: absolute;
+  top: 19px;
+  left: -21px;
+}
+.box .ribbon span:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #21A795;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #21A795;
+}
+.box .ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #21A795;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #21A795;
+}
+a {
+    color: white;
 }
