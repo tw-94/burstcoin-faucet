@@ -1,6 +1,14 @@
 # burstcoin-faucet
 Faucet for Cryptocurrency Burstcoin (use at your own risk)
 
+**Installation Guide**
+| required |
+|"Google reCaptcha" | Public Key and Private Key|
+|"Replace on index.html and index.ejs" | -> Site Key with Your Public Key |
+|"Google Domains" | Enter Domains where Faucet is reachable |
+|" Node 4.0 +" | Version Tested |
+
+
 **Configuration Paramater**
 
 | Setting | Description |
