@@ -20,7 +20,8 @@ var Recaptcha = require('express-recaptcha').Recaptcha;
 var recaptcha = new Recaptcha(faucetConfig.googlePublicKey, faucetConfig.googlePrivateKey);
 var errorCode = ''
 var errorMessage = '';
-
+var errorMessage2 = '';
+var balances = '';
 initWebserver();
 
 function initWebserver() {
@@ -50,20 +51,31 @@ function initWebserver() {
     });
 
     app.post('/', createAccountLimiter, function(req, res) {
-        console.log("1 | Requested Account: " + req.body.name);
         recaptcha.verify(req, function(error, data) {
             //TO-DO Change later
             if (!error) {
-                checkWallet(req.body.name);
-            } else {           
-                errorMessage = 'reCAPTCHA validation failed'
+                var value = getAccountBalance(faucetConfig.faucetAccount);
+                res.render('index', {
+                    error: errorMessage,
+                    balance: errorMessage2,
+                })
+                res.end();
+            } else {
+                res.render('error', {
+                    error: 'reCAPTCHA validation failed'
+                });
+                res.end();
             }
         })
-        res.render('index', {
-            error: errorMessage
-        });
     });
-
+    app.post('/burst', createAccountLimiter, function(req, res) {
+      console.log("1 | Requested Account: " + req.body.name);
+      checkWallet(req.body.name);
+      res.render('index', {
+          error: errorMessage,
+          balance: errorMessage2,
+      })
+    });
     app.use(function(req, res, next) {
         res.send('404 Not Found');
     });
@@ -74,7 +86,21 @@ function initWebserver() {
     });
 
 }
-
+function getAccountBalance(account) {
+    var Url = faucetConfig.faucetWallet + `/burst?requestType=getAccount&account=${account}`;
+    var amount;
+    request({
+            url: Url,
+            method: "GET",
+            json: true
+        },
+        function(error, response, body) {
+        amount = satoshiToDecimal(body.balanceNQT);
+        amount = amount.toFixed(2);
+        errorMessage2 = amount + " Burst";
+        }
+    );
+}
 function checkWallet(account) {
     var rs = account;
     //Numeric 64 Bit
@@ -157,9 +183,6 @@ function sendPayment(reci) {
 }
 
 function satoshiToDecimal(sat) {
-    if (typeof sat === 'undefined' || isNaN(sat)) {
-        return 0.0;
-    }
     return parseFloat(sat) / 100000000.0;
 }
 
