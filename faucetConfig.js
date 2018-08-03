@@ -8,7 +8,7 @@ claimRewardNQT: 0.1,
 //Claim Fee
 claimFeeNQT: 0.1,
 //Local Wallet xxx.xxx.xxx:XXXX
-faucetWallet : "",
+faucetWallet : "http://",
 //Passphrase for Faucet Account
 passphrase: "",
 //Numeric or RS-Address
