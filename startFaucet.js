@@ -45,14 +45,14 @@ function initWebserver() {
 
     app.use(createAccountLimiter);
     app.get('/', function(req, res) {
-        console.log("load");
-        res.render('index', {
-            error: 'post only method'
-        })
+      res.render('error', {
+          error: 'Form was manipulated'
+      });
     });
 
     app.post('/', createAccountLimiter, function(req, res) {
         recaptcha.verify(req, function(error, data) {
+            //TO-DO Change later
             if (!error) {
                 var value = getAccountBalance(faucetConfig.faucetAccount);
                 res.render('index', {
