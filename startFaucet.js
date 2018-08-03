@@ -21,6 +21,7 @@ var recaptcha = new Recaptcha(faucetConfig.googlePublicKey, faucetConfig.googleP
 var errorCode = ''
 var errorMessage = '';
 var errorMessage2 = '';
+var errorMessage3 = '';
 var balances = '';
 initWebserver();
 
@@ -53,11 +54,12 @@ function initWebserver() {
     app.post('/', createAccountLimiter, function(req, res) {
         recaptcha.verify(req, function(error, data) {
             //TO-DO Change later
-            if (!error) {
+            if (error) {
                 var value = getAccountBalance(faucetConfig.faucetAccount);
                 res.render('index', {
                     error: errorMessage,
                     balance: errorMessage2,
+                    status: errorMessage3,
                 })
                 res.end();
             } else {
@@ -74,6 +76,7 @@ function initWebserver() {
       res.render('index', {
           error: errorMessage,
           balance: errorMessage2,
+          status: errorMessage3,
       })
     });
     app.use(function(req, res, next) {
@@ -107,7 +110,7 @@ function checkWallet(account) {
     if (!/^[a-zA-Z0-9]+$/.test(account) || account.length < 14 || account.length > 20) {
         // Validation failed
         console.log("Wrong Format");
-        errorMessage = 'Input ' + account + ' has wrong format please use Numeric-ID'
+        errorMessage = 'Input ' + account + ' has wrong format or already positive balance'
     } else {
         checkAccount(account);
     }
@@ -126,7 +129,6 @@ function checkAccount(account) {
                 checkAccountBalance(account);
             } else {
                 console.log("2 | Rejected: Account is already known and has confirmed balance");
-                errorMessage = 'Account: ' + account + ' has already a positive balance';
             }
 
         }
@@ -175,7 +177,7 @@ function sendPayment(reci) {
             if (!error) {
                 console.log("5 | " + amount + " Burst transferred to " + reci);
                 console.log("|-------------- Claim Successful --------------|");
-                errorMessage = 'claim successful'
+                errorMessage3 = 'claim successful'
             }
 
         }
