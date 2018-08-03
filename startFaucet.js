@@ -53,8 +53,7 @@ function initWebserver() {
 
     app.post('/', createAccountLimiter, function(req, res) {
         recaptcha.verify(req, function(error, data) {
-            //TO-DO Change later
-            if (error) {
+            if (!error) {
                 var value = getAccountBalance(faucetConfig.faucetAccount);
                 res.render('index', {
                     error: errorMessage,
