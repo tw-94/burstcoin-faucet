@@ -1,5 +1,5 @@
-![](https://preview.ibb.co/cAXcwK/faucet.png)
-Faucet for Cryptocurrency Burstcoin (use at your own risk) written by BurstNeon http://burstneon.com/
+![](https://preview.ibb.co/cAXcwK/faucet.png) 
+<br /> Faucet for Cryptocurrency Burstcoin (use at your own risk) written by BurstNeon http://burstneon.com/
 
 **Installation Guide**
 
