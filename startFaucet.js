@@ -59,6 +59,7 @@ function initWebserver() {
                     error: errorMessage,
                     balance: errorMessage2,
                     status: errorMessage3,
+                    donate: faucetConfig.faucetAccountDonation,
                 })
                 res.end();
             } else {
@@ -76,7 +77,9 @@ function initWebserver() {
           error: errorMessage,
           balance: errorMessage2,
           status: errorMessage3,
+          donate: faucetConfig.faucetAccountDonation,
       })
+      done();
     });
     app.use(function(req, res, next) {
         res.send('404 Not Found');
@@ -87,6 +90,13 @@ function initWebserver() {
         console.log('http server running on port ' + faucetConfig.httpPort);
     });
 
+}
+function done() {
+  var errorCode = ''
+  var errorMessage = '';
+  var errorMessage2 = '';
+  var errorMessage3 = '';
+  var balances = '';
 }
 function getAccountBalance(account) {
     var Url = faucetConfig.faucetWallet + `/burst?requestType=getAccount&account=${account}`;
