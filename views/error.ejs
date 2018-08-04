@@ -4,55 +4,86 @@
 </head>
 <div id="form-main">
   <div id="form-div" class="box">
-      <div class="ribbon"><span><a href="https://github.com/BurstNeon/burstcoin-faucet" target="_blank">Git Beta</a></span></div>
-  <img src="faucet.png" alt="Italian Trulli">
-      <h3 id="error2">  Donate to <%= donate %>  <h3>
-    <form class="form" method="post" action="/burst" novalidate>
-
-      <p class="name">
-        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Enter Numeric Account ID" id="name" />
-      </p>
-
-      <div class="submit">
-        <input type="submit" value="Claim" id="button-blue"/>
-        <div class="ease"></div>
-      </div>
-    </form>
-      <h3 id="status">   Faucet Balance: <%= balance %> <h3>
-      <h3 id="error">   <%= error %> <%= status %>  <h3>
-
-<style>
-#status {
-    background: #0e0e0e;
-        background-color: rgb(14, 14, 14);
-    text-align: center;
-    color: black;
-    text-transform: uppercase;
-    background-color: #ED474780;
-    width: 100%;
-    border: 0;
-    padding: 10px 0;
-    margin: 5px 0;
-    text-align: center;
+    <div class="ribbon"><span><a href="https://github.com/BurstNeon/burstcoin-faucet" target="_blank">Git Beta</a></span></div>
+    <div class="folded"><h2> &#9888; Error</h2></div>
+    <input type="button" class="button" value="Back to Faucet" onclick="history.back()">
+    <div id="errors"> &#8618; <span><%= error %></span></div>
+    <style>
+div h2 {
+    background: #bb0021;
+      background-image: none;
+      background-image: radial-gradient(transparent 30%, rgba(255, 255, 255, 0));
+    border: 0 solid rgba(0,0,0,0.2);
     color: #fff;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
-    font-family: arial;
+    position: relative;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.2);
 }
-img {
-
-    height: 100px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-
-}
-#error2 {
-    background: white;
+h3 {
     text-align: center;
-    font-size: 13px;
-    color: black;
+    border: 2px solid;
+    padding: 10px;
+    color: white;
+    margin-top: 10%;
 }
-</style>
+#errors {
+    width: 100%;
+    background: black;
+    margin: 10px 5px;
+    color: white;
+    text-align: center;
+}
+.button {
+    width: 100%;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+        margin-top: 10px;
+    font-size: 15px;
+    font-family: arial;
+    text-transform: uppercase;
+    margin-top: 10%;
+}
+div.folded:before, div.folded:after {
+    bottom: 26px;
+    box-shadow: 0 28px 8px rgba(0,0,0,0.5);
+    content: "";
+    height: 28px;
+    position: absolute;
+    width: 48%;
+    z-index: -1;
+}
+div.folded:before {
+    left: 2%;
+    transform: rotate(-3deg);
+}
+div.folded:after {
+    right: 2%;
+    transform: rotate(3deg);
+}
+div.folded h2 {
+    border-width: 1px 1px 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 4px 40px;
+    position: absolute;
+    right: -14px;
+    top: 12px;
+}
+div.folded h2:after {
+    border-width: 7px;
+    border-style: solid;
+    border-color: #134 transparent transparent #134;
+    bottom: -15px;
+    content: "";
+    position: absolute;
+    right: -1px;
+}
+    </style>
   </div>
