@@ -13,6 +13,8 @@ faucetWallet : "http://",
 passphrase: "",
 //Numeric or RS-Address
 faucetAccount: "",
+// Donation Address Numeric or RS-Address for Display on Website
+faucetAccountDonation: "",
 //Http Port
 httpPort: 80,
 //Max Request per Ip
