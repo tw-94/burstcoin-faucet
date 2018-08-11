@@ -92,12 +92,13 @@ function initWebserver() {
 
 }
 function done() {
-  var errorCode = ''
-  var errorMessage = '';
-  var errorMessage2 = '';
-  var errorMessage3 = '';
-  var balances = '';
+  errorCode = '';
+  errorMessage = '';
+  errorMessage2 = '';
+  errorMessage3 = '';
+  balances = '';
 }
+
 function getAccountBalance(account) {
     var Url = faucetConfig.faucetWallet + `/burst?requestType=getAccount&account=${account}`;
     var amount;
