@@ -6,7 +6,7 @@
 | required | Description |
 | --- | --- |
 |"1.Google reCaptcha" | Public Key and Private Key|
-|"1.1 Replace on index.html and index.ejs" | Site Key with Your Public Key |
+|"1.1 Replace on index.html" | Site Key with Your Public Key |
 |"1.1.2 Google Domains" | Enter Domains where Faucet is reachable |
 |"2. Node 4.0 +" | Version Tested |
 ```
