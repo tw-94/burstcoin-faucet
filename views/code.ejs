@@ -1,0 +1,70 @@
+<head>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" type="text/css" href="faucet.css" media="screen" />
+</head>
+<div id="form-main">
+    <div id="form-div" class="box">
+        <div class="ribbon"><span><a href="https://github.com/BurstNeon/burstcoin-faucet" target="_blank">Git Beta</a></span></div>
+        <img src="faucet.png" alt="Italian Trulli">
+        <h3 id="error2"> Donate to
+            <%= donate %>
+            <h3>
+                <form class="form" method="post" action="/code" novalidate>
+
+                    <p class="name">
+                        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Enter Numeric Account ID" id="name" />
+                    </p>
+                    <p class="name">
+                        <input name="code" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Enter Faucet Code" id="name" />
+                    </p>
+
+                    <div class="submit">
+                        <input type="submit" value="Claim" id="button-blue" />
+                        <div class="ease"></div>
+                    </div>
+                </form>
+                <h3 id="status"> Faucet Balance:
+                    <%= balance %>
+                    <h3>
+                        <h3 id="error">
+                            <%= error %>
+                            <%= status %>
+                            <h3>
+
+                                <style>
+                                    #status {
+                                        background: #0e0e0e;
+                                        background-color: rgb(14, 14, 14);
+                                        text-align: center;
+                                        color: black;
+                                        text-transform: uppercase;
+                                        background-color: #ED474780;
+                                        width: 100%;
+                                        border: 0;
+                                        padding: 10px 0;
+                                        margin: 5px 0;
+                                        text-align: center;
+                                        color: #fff;
+                                        font-weight: bold;
+                                        font-size: 16px;
+                                        font-family: arial;
+                                    }
+
+                                    img {
+
+                                        height: 100px;
+                                        width: 50%;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        display: block;
+
+                                    }
+
+                                    #error2 {
+                                        background: white;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        color: black;
+                                    }
+                                </style>
+    </div>
