@@ -19,4 +19,18 @@ faucetAccountDonation: "",
 httpPort: 80,
 //Max Request per Ip
 maxRequest: 3,
+//Faucet Code Length
+faucetUseCodes: true,
+//Faucet Codes Accessible  [: Client Folder ] (For Example Bots etc.)
+faucetCodesPublic: true,
+//Faucet Code Length
+faucetCodeLength: 5,
+//Numer of Faucet Codes
+faucetCodeCount: 5,
+//Faucet Code Prefix
+faucetCodePrefix: "",
+//Faucet Code Postfix
+faucetCodePostfix: "",
+//Faucet File Name (Recommended to change at public access [./client])
+faucetFileName: "faucetCodes",
 }
