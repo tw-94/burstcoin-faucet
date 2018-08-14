@@ -29,7 +29,13 @@
 |"passphrase" | Passphrase for Faucet Account |
 |"faucetAccount" | Numeric Account ID or RS-Address |
 |"maxRequest" | Maximal Number of Request per Ip|
-
+|"faucetUseCodes" | Use Faucet Codes: true : false |
+|"faucetCodesPublic" | Faucet Codes Accessible: true : false |
+|"faucetCodeLength" | Faucet Code Length |
+|"faucetCodeCount" | Number of Faucet Codes |
+|"faucetCodePrefix" | Faucet Code Prefix |
+|"faucetCodePostfix" | Faucet Code Postfix |
+|"faucetFileName" | Faucet File Name (Recommended to change at public access [./client]) |
 
 ```
 Donate to support development Burst-2QQ5-6477-ZFK5-BQCH4
