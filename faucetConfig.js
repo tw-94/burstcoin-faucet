@@ -18,7 +18,7 @@ faucetAccountDonation: "",
 //Http Port
 httpPort: 80,
 //Max Request per Ip
-maxRequest: 3,
+maxRequest: 50,
 //Faucet Code Length
 faucetUseCodes: true,
 //Faucet Codes Accessible  [: Client Folder ] (For Example Bots etc.)
